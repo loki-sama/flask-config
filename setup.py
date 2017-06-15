@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import re
-__src__ = file('flask_config.py').read()
+__src__ = open('flask_config.py').read()
 __doc__ = re.search('^(["\']{3})(.*?)\\1', __src__, re.M|re.S).group(2).strip()
 __version__ = re.search('^__version__\s*=\s*(["\'])(.*?)\\1\s*$', __src__, re.M).group(2).strip()
 
